@@ -311,7 +311,11 @@ def main() -> None:
     panel = prepare_panel()
     models = fit_models(panel)
     results = tidy_key_results(models)
-    results.to_csv(OUTPUT_DIR / "public_sample_results.csv", index=False)
+    results.to_csv(
+        OUTPUT_DIR / "public_sample_results.csv",
+        index=False,
+        float_format="%.6f",
+    )
 
     plot_dual_pricing(models)
     plot_sample_panel(panel)

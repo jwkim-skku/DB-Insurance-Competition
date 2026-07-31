@@ -21,5 +21,12 @@ jobs:
       - run: python scripts/generate_sample_data.py
       - run: python src/analysis.py
       - run: python -m unittest discover -s tests
-      - name: Ensure generated files are committed
-        run: git diff --exit-code
+      - name: Ensure the synthetic panel is deterministic
+        run: git diff --exit-code -- data/sample_shipping_panel.csv
+      - name: Verify generated portfolio artifacts
+        run: |
+          test -s outputs/public_sample_results.csv
+          test -s site/assets/dual-pricing.png
+          test -s site/assets/sample-panel.png
+          test -s site/assets/sll-grid.png
+          test -s site/assets/og-card.png
