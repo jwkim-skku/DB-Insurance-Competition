@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+Thumbs.db
+
+# Licensed or private data must never be committed.
+data/raw/
+data/private/
+*.dta
+*.xlsx
+*.xls
+*.sav
+*.mp3
+
+# Local reports and credentials
+.env
+.env.*
+!.env.example
+reports/private/
