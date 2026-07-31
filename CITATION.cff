@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use the public demonstration code, please cite this repository."
+title: "Carbon Risk, Priced Twice"
+type: software
+authors:
+  - family-names: Kim
+    given-names: Jaewon
+  - family-names: Kim
+    given-names: Hong
+year: 2026
+repository-code: "https://github.com/jwkim-skku/DB-Insurance-Competition"
+license: MIT

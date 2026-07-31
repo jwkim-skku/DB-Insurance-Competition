@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="해운기업의 탄소규제 위험, Merton 부도확률, 자본비용과 지속가능연계대출(SLL) 설계를 연결한 연구 포트폴리오."
+    />
+    <meta name="theme-color" content="#102a2e" />
+    <meta property="og:title" content="Carbon Risk, Priced Twice" />
+    <meta
+      property="og:description"
+      content="Shipping credit risk, carbon pricing, and a Carbon Risk-Responsive SLL."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://jwkim-skku.github.io/DB-Insurance-Competition/"
+    />
+    <meta
+      property="og:image"
+      content="https://jwkim-skku.github.io/DB-Insurance-Competition/assets/og-card.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Carbon Risk, Priced Twice</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+    <header class="site-header" data-header>
+      <a class="wordmark" href="#top" aria-label="처음으로">
+        <span class="wordmark-mark">CR</span>
+        <span>Dual Pricing</span>
+      </a>
+      <nav aria-label="주요 메뉴">
+        <a href="#question">Question</a>
+        <a href="#method">Method</a>
+        <a href="#findings">Findings</a>
+        <a href="#product">SLL Design</a>
+      </nav>
+      <a
+        class="header-cta"
+        href="https://github.com/jwkim-skku/DB-Insurance-Competition"
+      >
+        View source
+      </a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">DB Insurance &amp; Finance Competition · Portfolio</p>
+            <h1>Carbon risk,<br /><em>priced twice.</em></h1>
+            <p class="hero-lead">
+              해운기업의 탄소규제 위험은 부도위험을 통해서만 가격화될까?
+              구조적 신용위험과 독립적인 탄소 프리미엄을 분리하고, 그 결과를
+              지속가능연계대출 설계로 연결했습니다.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#question">Explore the study</a>
+              <a
+                class="button button-ghost"
+                href="https://github.com/jwkim-skku/DB-Insurance-Competition/blob/main/docs/methodology.md"
+              >
+                Read methodology
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="연구 핵심 구조">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="risk-node node-carbon">
+              <span>01</span>
+              <strong>Carbon<br />exposure</strong>
+            </div>
+            <div class="risk-node node-credit">
+              <span>02</span>
+              <strong>Structural<br />credit risk</strong>
+            </div>
+            <div class="risk-node node-price">
+              <span>03</span>
+              <strong>Cost<br />of debt</strong>
+            </div>
+            <p class="visual-note">Two channels.<br />One financing decision.</p>
+          </div>
+        </div>
+
+        <div class="metric-strip reveal" aria-label="연구 표본 요약">
+          <div><strong>27</strong><span>global shipping firms</span></div>
+          <div><strong>254</strong><span>firm-year observations</span></div>
+          <div><strong>2016–25</strong><span>research window</span></div>
+          <div><strong>37p</strong><span>submitted manuscript</span></div>
+        </div>
+      </section>
+
+      <section class="section section-question" id="question">
+        <div class="section-heading reveal">
+          <p class="eyebrow">01 · Research question</p>
+          <h2>신용위험을 통제한 뒤에도<br />탄소위험은 남는가?</h2>
+        </div>
+        <div class="question-grid">
+          <article class="thesis-card reveal">
+            <span class="card-index">A</span>
+            <h3>Credit-risk channel</h3>
+            <p>
+              탄소규제는 비용과 자산가치에 영향을 주고, 그 충격은 Merton 구조모형의
+              부도확률을 통해 조달금리에 반영될 수 있습니다.
+            </p>
+            <div class="mini-flow">
+              <span>Regulation</span><i></i><span>PD</span><i></i><span>Spread</span>
+            </div>
+          </article>
+          <article class="thesis-card thesis-card-accent reveal">
+            <span class="card-index">B</span>
+            <h3>Additional carbon premium</h3>
+            <p>
+              대주단은 구조적 부도위험이 포착하지 못하는 전환비용·담보가치·규제
+              불확실성을 탄소집약도에 별도로 가격화할 수 있습니다.
+            </p>
+            <div class="mini-flow">
+              <span>Carbon</span><i></i><span>Residual risk</span><i></i><span>Spread</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-method" id="method">
+        <div class="section-heading light reveal">
+          <p class="eyebrow">02 · Empirical architecture</p>
+          <h2>시장자료에서 금융상품까지,<br />하나의 분석 파이프라인</h2>
+        </div>
+        <ol class="method-list">
+          <li class="reveal">
+            <span>01</span>
+            <div>
+              <h3>Build the panel</h3>
+              <p>재무·주가·무위험금리·ESG·탄소 데이터를 ISIN과 연도로 결합</p>
+            </div>
+            <small>Bloomberg · WRDS · LSEG · FRED</small>
+          </li>
+          <li class="reveal">
+            <span>02</span>
+            <div>
+              <h3>Estimate structural risk</h3>
+              <p>관측된 주식가치와 변동성으로 자산가치·자산변동성과 Merton PD 추정</p>
+            </div>
+            <small>Contingent-claims model</small>
+          </li>
+          <li class="reveal">
+            <span>03</span>
+            <div>
+              <h3>Separate the channels</h3>
+              <p>기업·연도 고정효과와 군집표준오차로 신용위험과 탄소위험을 함께 검증</p>
+            </div>
+            <small>Firm &amp; year FE</small>
+          </li>
+          <li class="reveal">
+            <span>04</span>
+            <div>
+              <h3>Translate into SLL terms</h3>
+              <p>탄소집약도 개선과 선박 CII 성과를 투명한 금리 조정표로 연결</p>
+            </div>
+            <small>KPI · SPT · verification</small>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section section-findings" id="findings">
+        <div class="section-heading reveal">
+          <p class="eyebrow">03 · Findings</p>
+          <h2>위험을 하나의 숫자로<br />축약하지 않았습니다.</h2>
+          <p class="heading-copy">
+            연구 원고는 시차를 둔 구조적 부도위험과 탄소집약도가 자본비용에 서로
+            다른 정보를 제공할 가능성을 제시합니다. 아래 그래프는 공개 코드의
+            작동을 보여주는 합성 데이터 결과입니다.
+          </p>
+        </div>
+        <div class="figure-grid">
+          <figure class="figure-card figure-wide reveal">
+            <img
+              src="assets/dual-pricing.png"
+              alt="합성 표본에서 시차 부도위험과 탄소집약도의 회귀계수와 신뢰구간"
+            />
+            <figcaption>
+              Public workflow demo · estimates shown here are not manuscript results.
+            </figcaption>
+          </figure>
+          <figure class="figure-card reveal">
+            <img
+              src="assets/sample-panel.png"
+              alt="합성 패널의 연도별 평균 조달금리와 Merton 부도확률"
+            />
+            <figcaption>
+              Synthetic annual panel view · 12 fictional firms.
+            </figcaption>
+          </figure>
+          <article class="interpretation-card reveal">
+            <p class="eyebrow">Interpretation</p>
+            <blockquote>
+              “A raw slope and a within-firm estimate are not the same object.”
+            </blockquote>
+            <p>
+              단순 산점도와 고정효과 회귀의 부호가 달라질 수 있음을 명시하고,
+              표본 변화와 조건부 해석을 문서화했습니다.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-product" id="product">
+        <div class="product-intro reveal">
+          <p class="eyebrow">04 · Product translation</p>
+          <h2>Carbon Risk-Responsive SLL</h2>
+          <p>
+            추상적인 ESG 약속이 아니라 측정 가능한 탄소성과와 선박 운항효율을
+            금리에 연결합니다. KPI 정의, 목표 난이도, 보고경계와 외부검증을 계약
+            단계에서 함께 고정하는 구조입니다.
+          </p>
+        </div>
+        <div class="product-grid">
+          <div class="kpi-stack">
+            <article class="kpi-card reveal">
+              <span>KPI 01</span>
+              <h3>Revenue carbon intensity</h3>
+              <p>전년 대비 개선률을 사전 정의된 매출·배출량 경계로 측정</p>
+            </article>
+            <article class="kpi-card reveal">
+              <span>KPI 02</span>
+              <h3>Vessel CII performance</h3>
+              <p>적용 선박의 CII 등급과 개선계획 이행 여부를 함께 반영</p>
+            </article>
+            <article class="kpi-card reveal">
+              <span>CONTROL</span>
+              <h3>Independent verification</h3>
+              <p>연례 보고와 외부검증으로 KPI 왜곡과 그린워싱 위험을 축소</p>
+            </article>
+          </div>
+          <figure class="figure-card product-figure reveal">
+            <img
+              src="assets/sll-grid.png"
+              alt="연간 탄소집약도 개선률에 따른 예시 대출금리 조정표"
+            />
+            <figcaption>
+              Illustrative ratchet · not a lending quote or final term sheet.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section-disclosure" id="disclosure">
+        <div class="disclosure-copy reveal">
+          <p class="eyebrow">05 · Open work, responsible disclosure</p>
+          <h2>코드는 공개하고,<br />권리는 지켰습니다.</h2>
+        </div>
+        <div class="disclosure-grid">
+          <article class="reveal">
+            <strong>Open</strong>
+            <p>Merton 산식, 패널 회귀 코드, 테스트, 합성 표본, 시각화와 방법론</p>
+          </article>
+          <article class="reveal">
+            <strong>Restricted</strong>
+            <p>Bloomberg·LSEG·WRDS 원자료, 개인정보, 타인 논문과 저작권 자료</p>
+          </article>
+          <article class="reveal">
+            <strong>Explicit</strong>
+            <p>합성 결과와 원고 결과를 분리하고 인과추론이 아닌 조건부 연관으로 해석</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="closing">
+        <div class="closing-inner reveal">
+          <p class="eyebrow">Team Deoksang · Sungkyunkwan University</p>
+          <h2>From climate exposure<br />to a bankable contract.</h2>
+          <p>Jaewon Kim · Hong Kim</p>
+          <div class="hero-actions">
+            <a
+              class="button button-light"
+              href="https://github.com/jwkim-skku/DB-Insurance-Competition"
+            >
+              Explore the repository
+            </a>
+            <a
+              class="button button-outline-light"
+              href="https://github.com/jwkim-skku/DB-Insurance-Competition/blob/main/docs/reproducibility.md"
+            >
+              Read limitations
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Team Deoksang. Portfolio edition.</p>
+      <p>Code: MIT · Vendor data not redistributed.</p>
+    </footer>
+  </body>
+</html>

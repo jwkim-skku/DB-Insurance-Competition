@@ -1,0 +1,32 @@
+name: Validate public workflow
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python scripts/generate_sample_data.py
+      - run: python src/analysis.py
+      - run: python -m unittest discover -s tests
+      - name: Ensure the synthetic panel is deterministic
+        run: git diff --exit-code -- data/sample_shipping_panel.csv
+      - name: Verify generated portfolio artifacts
+        run: |
+          test -s outputs/public_sample_results.csv
+          test -s site/assets/dual-pricing.png
+          test -s site/assets/sample-panel.png
+          test -s site/assets/sll-grid.png
+          test -s site/assets/og-card.png
